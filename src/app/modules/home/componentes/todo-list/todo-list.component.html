@@ -1,0 +1,14 @@
+<section>
+    <ul *ngIf="TaskList.length">
+        <li *ngFor="let item of TaskList; let i = index">
+            <input type="checkbox" [(ngModel)]="item.checked">
+            <input type="text" [(ngModel)]="item.task" [ngClass]="{'checked': item.checked}">
+
+            <button (click)="deleteItem(i)">Lixo</button>
+        </li>
+    </ul>
+</section>
+
+<app-input-add-itens (emmitItemTask)="setItem($event)"></app-input-add-itens>
+<app-button-delete-all *ngIf="TaskList.length" (click)="deleteAll()"></app-button-delete-all>
+
