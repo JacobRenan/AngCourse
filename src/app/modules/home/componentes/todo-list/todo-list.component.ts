@@ -9,6 +9,7 @@ import { TaskList } from '../../model/task-list';
 })
 export class TodoListComponent implements DoCheck {
 
+  //comentário para o teste de push to branch
   constructor() { }
 
   public TaskList: Array<TaskList> = [ ];
